@@ -1,0 +1,18 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+aws:
+  region: ${AWS_REGION:us-east-2}
+
+logging:
+  level:
+    com.amazonaws: ${LOG_LEVEL_AWS:WARN}
+    com.example: ${LOG_LEVEL_APP:INFO}
+
+# DynamoDB configuration
+amazon:
+  dynamodb:
+    region: ${AWS_REGION:us-east-2}
+    endpoint:
+  # Don't set endpoint for remote DynamoDB (AWS cloud)
+  # endpoint: ${AWS_DYNAMODB_ENDPOINT:}  # commented out for remote
