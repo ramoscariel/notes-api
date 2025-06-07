@@ -31,12 +31,12 @@ build:
 unit_test:
   stage: unit_test
   script:
-    - ./mvnw test -Dtest=com.example.notes_api.UnitTestClass1,com.example.notes_api.UnitTestClass2
+    - ./mvnw test -Dtest=com.example.notes_api.unit.NoteTest
 
 integration_test:
   stage: integration_test
   script:
-    - ./mvnw verify -Dtest=com.example.notes_api.IntegrationTestClass1,com.example.notes_api.IntegrationTestClass2
+    - ./mvnw test -Dtest=com.example.notes_api.integration.NoteControllerTest
 
 deploy:
   stage: deploy
